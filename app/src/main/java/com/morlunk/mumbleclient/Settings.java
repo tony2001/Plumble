@@ -105,6 +105,9 @@ public class Settings {
     public static final String ARRAY_THEME_SOLARIZED_LIGHT = "solarizedLight";
     public static final String ARRAY_THEME_SOLARIZED_DARK = "solarizedDark";
 
+    public static final String PREF_PTT_BUTTON_HEIGHT = "pttButtonHeight";
+    public static final int DEFAULT_PTT_BUTTON_HEIGHT = 150;
+
     /** @deprecated use {@link #PREF_CERT_ID } */
     public static final String PREF_CERT_DEPRECATED = "certificatePath";
     /** @deprecated use {@link #PREF_CERT_ID } */
@@ -160,6 +163,9 @@ public class Settings {
 
     public static final String PREF_SHOW_USER_COUNT = "show_user_count";
     public static final boolean DEFAULT_SHOW_USER_COUNT = false;
+
+    public static final String PREF_START_UP_IN_PINNED_MODE = "startUpInPinnedMode";
+    public static final boolean DEFAULT_START_UP_IN_PINNED_MODE = false;
 
     static {
         ARRAY_INPUT_METHODS = new HashSet<String>();
@@ -323,6 +329,11 @@ public class Settings {
         return -1;
     }
 
+    /* @return the height of PTT button */
+    public int getPTTButtonHeight() {
+        return preferences.getInt(Settings.PREF_PTT_BUTTON_HEIGHT, DEFAULT_PTT_BUTTON_HEIGHT);
+    }
+
     /**
      * Returns a database identifier for the default certificate, or a negative number if there is
      * no default certificate set.
@@ -440,5 +451,9 @@ public class Settings {
      */
     public boolean shouldShowUserCount() {
         return preferences.getBoolean(PREF_SHOW_USER_COUNT, DEFAULT_SHOW_USER_COUNT);
+    }
+
+    public boolean shouldStartUpInPinnedMode() {
+        return preferences.getBoolean(PREF_START_UP_IN_PINNED_MODE, DEFAULT_START_UP_IN_PINNED_MODE);
     }
 }

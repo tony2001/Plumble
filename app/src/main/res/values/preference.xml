@@ -102,6 +102,8 @@
     <string name="useTorSum">Requires Orbot app</string>
     <string name="inputQuality">Input Quality</string>
     <string name="inputQualitySum">The target input quality in bps.</string>
+    <string name="pttButtonHeight">Push-To-Talk Button height</string>
+    <string name="pttButtonHeightSum">Change the height of Push-To-Talk Button.</string>
     <string name="pressKey">Press a hardware key to bind to push-to-talk.</string>
     <string name="pressKeyInfo">Note: due to limitations in Android, the app must be open to use hardware key push to talk.</string>
     <string name="loadImagesSum">Whether to load external images in chat.</string>
@@ -129,4 +131,6 @@
     <string name="pref_export_certificate_summary">Exports a certificate to external storage.</string>
     <string name="pref_show_user_count">Show Channel User Count</string>
     <string name="pref_show_user_count_summary">Show a counter with the number of users in a channel subtree.</string>
+    <string name="pref_start_up_in_pinned_mode">Start Up In Pinned Mode</string>
+    <string name="pref_start_upIn_pinned_mode_sum">When connecting to a server, only the pinned channels will be displayed.</string>
 </resources>
